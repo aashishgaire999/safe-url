@@ -9,10 +9,10 @@
   },
   "files": ["src"],
   "engines": { "node": ">=18" },
-  "scripts": { "test": "node --test test/" },
+  "scripts": { "test": "node --test test/*.test.js" },
   "keywords": ["ssrf", "security", "url", "validation", "dns-rebinding", "private-ip"],
   "license": "MIT",
   "author": "Codyza (https://www.codyza.com)",
-  "repository": { "type": "git", "url": "git+https://github.com/codyza-com/safe-url.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/aashishgaire999/safe-url.git" },
   "sideEffects": false
 }

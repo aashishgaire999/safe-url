@@ -6,6 +6,10 @@ If your app fetches links that users give it (link previews, screenshots, webhoo
 
 Checking the link's text isn't enough. `https://127.0.0.1.nip.io/` looks like an ordinary domain but points at your own server. `safe-url` checks the text **and** the address your server actually connects to.
 
+```sh
+npm install github:aashishgaire999/safe-url
+```
+
 ```js
 import { checkUrl } from "@codyza/safe-url"          // anywhere: browser, edge, Node
 import { safeFetch } from "@codyza/safe-url/node"    // Node servers
@@ -64,7 +68,7 @@ const agent = new https.Agent({ lookup: publicLookup })
 - This protects the connection, not what you do with the response. Still treat fetched content as untrusted.
 
 ## Why it exists
-We built this for [Codyza](https://www.codyza.com), a volunteer community where people ship real software. Members submit links to their projects, and our server fetches them to make previews. We open-sourced the guard so other small teams don't have to learn SSRF the hard way.
+Made by [Codyza](https://www.codyza.com), a volunteer community where people ship real software. We open-sourced it so other small teams don't have to learn SSRF the hard way.
 
 ## Development
 ```sh
@@ -72,5 +76,7 @@ npm test                    # offline tests
 NETWORK_TESTS=1 npm test    # also tests real DNS and fetching
 ```
 Node 18 or newer. Pull requests welcome; please add a test with any new case.
+
+Found a way around it? Please report it privately, see [SECURITY.md](SECURITY.md).
 
 MIT © Codyza
