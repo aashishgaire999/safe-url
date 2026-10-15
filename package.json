@@ -1,0 +1,18 @@
+{
+  "name": "@codyza/safe-url",
+  "version": "0.1.0",
+  "description": "Stop your server from being tricked into fetching private addresses (SSRF). Zero dependencies.",
+  "type": "module",
+  "exports": {
+    ".": { "types": "./src/index.d.ts", "default": "./src/index.js" },
+    "./node": { "types": "./src/node.d.ts", "default": "./src/node.js" }
+  },
+  "files": ["src"],
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test test/" },
+  "keywords": ["ssrf", "security", "url", "validation", "dns-rebinding", "private-ip"],
+  "license": "MIT",
+  "author": "Codyza (https://www.codyza.com)",
+  "repository": { "type": "git", "url": "git+https://github.com/codyza-com/safe-url.git" },
+  "sideEffects": false
+}
